@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="14dp"
+    android:elevation="10dp"
+    >
+
+    <TextView
+        android:id="@+id/shoppingItemTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="@string/itemtype"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemCountTextView"
+        app:layout_constraintEnd_toStartOf="@+id/itemCountTextView"
+        app:layout_constraintStart_toEndOf="@id/itemCountTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="apple" />
+
+    <TextView
+        android:id="@+id/itemCountTextView"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shoppingItemTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/shoppingItemTextView"
+        tools:text="2"
+        />
+
+    <ImageView
+        android:id="@+id/button_plus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_plus"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_minus"
+        app:layout_constraintTop_toTopOf="@+id/button_minus"
+        android:contentDescription="@string/plus_button" />
+
+    <ImageView
+        android:id="@+id/button_minus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_minus"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/itemCountTextView"
+        app:layout_constraintTop_toBottomOf="@+id/itemCountTextView"
+        android:contentDescription="@string/minus_button" />
+    <ImageView
+        android:id="@+id/button_delete"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_delete"
+        android:clickable="true"
+        android:focusable="true"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/shoppingItemTextView"
+        app:layout_constraintTop_toBottomOf="@id/shoppingItemTextView"
+        android:contentDescription="@string/delete_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
